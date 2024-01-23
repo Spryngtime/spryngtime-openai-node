@@ -1,0 +1,16 @@
+{
+  "name": "spryngtime-openai-node",
+  "version": "1.0.1",
+  "description": "Spryngtime wrapper over OpenAI for analytics purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.2",
+    "openai": "^4.25.0",
+    "spryngtime-analytics-sdk": "^1.1.2"
+  }
+}
