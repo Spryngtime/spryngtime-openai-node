@@ -18,6 +18,7 @@ async function main() {
     const chatCompletion = await openai.chat.completions.create({
         messages: [{ role: 'user', content: query }],
         model: 'gpt-3.5-turbo-1106',
+        user:"user_123456",
         max_tokens: 100,
     });
     console.log(JSON.stringify(chatCompletion, null, 2));
@@ -30,9 +31,9 @@ async function main() {
     });
     console.log(JSON.stringify(stream, null, 2));
 
-    // for await (const chunk of stream) {
-    //     process.stdout.write(chunk.choices[0]?.delta?.content || '');
-    // }
+    for await (const chunk of stream) {
+        process.stdout.write(chunk.choices[0]?.delta?.content || '');
+    }
     // //
 
     // Azure OpenAI
